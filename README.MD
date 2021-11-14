@@ -15,7 +15,7 @@ L'api propose les services suivants sur ces routes :
   - Récupérer un anime par un de ses genres :  
   ``http://localhost:8080/animes/genre/action``
 - Route en POST :
-  - Ajouter un anime à la liste:  
+  - Ajouter un anime à la liste :  
   ``http://localhost:8080/animes``
   
 
@@ -24,16 +24,16 @@ Content-Type: application/json
 body:  
 ```json
 {  
-  "id": int, 
-  "title": string,  
-  "note": string,
-  "type": string,
-  "status": string,
-  "episodes": string,
-  "start_date": string,
-  "end_date": string,
-  "genre": string[],
-  "synopsis": string
+  "id": "int", 
+  "title": "string",  
+  "note": "string",
+  "type": "string",
+  "status": "string",
+  "episodes": "string",
+  "start_date": "string",
+  "end_date": "string",
+  "genre": "string[]",
+  "synopsis": "string"
 }
 ```
 
