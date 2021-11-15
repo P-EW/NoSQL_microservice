@@ -17,9 +17,15 @@ L'api propose les services suivants sur ces routes :
 - Route en POST :
   - Ajouter un anime à la liste :  
   ``http://localhost:8080/animes``
+- Route en DELETE :
+  - Supprimer un anime par son id :  
+    ``http://localhost:8080/anime/id``
+- Route en PUT :
+  - Ajouter/Remplacer un anime à la liste :  
+    ``http://localhost:8080/anime``
   
 
-## Format de l'objet Anime à POST :
+## Format de l'objet Anime à POST/PUT :
 Content-Type: application/json  
 body:  
 ```json
