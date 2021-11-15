@@ -37,4 +37,14 @@ public class AnimeController {
     public List<Anime> getAnimeByGenre(@PathVariable String genre){
         return dao.findByGenre(genre);
     }
+
+    @DeleteMapping(value ="/anime/{id}")
+    public void deleteAnime(@PathVariable int id){
+        dao.deleteByIndex(id);
+    }
+
+    @PutMapping(value ="/anime/")
+    public void replaceAnime(@RequestBody Anime a){
+        dao.updateByIndex(a);
+    }
 }

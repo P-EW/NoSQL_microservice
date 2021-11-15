@@ -61,6 +61,36 @@ public class AnimeDAO  implements IAnimeDAO{
     @Override
     public void save(Anime anime) {
         animeList.add(anime);
+
+        saveFile();
+    }
+
+    @Override
+    public void deleteByIndex(int id) {
+        animeList = animeList.stream()
+                .filter(anime -> anime.getId() != id)
+                .collect(Collectors.toList());
+
+        saveFile();
+    }
+
+    @Override
+    public void updateByIndex(Anime a) {
+        Anime old = animeList.stream().filter(anime -> a.getId() == anime.getId())
+                .findFirst()
+                .orElse(null);
+
+        if(old != null){
+            animeList.set(animeList.indexOf(old),a);
+        }
+        else{
+            animeList.add(a);
+        }
+
+        saveFile();
+    }
+
+    private void saveFile(){
         try {
             //Update the Json File
             ByteArrayOutputStream out = new ByteArrayOutputStream();

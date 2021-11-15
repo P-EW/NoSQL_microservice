@@ -15,4 +15,8 @@ public interface IAnimeDAO {
     List<Anime> findByName(String name);
 
     void save(Anime anime);
+
+    void deleteByIndex(int id);
+
+    void updateByIndex(Anime a);
 }
