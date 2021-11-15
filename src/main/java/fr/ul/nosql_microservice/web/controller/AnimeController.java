@@ -43,7 +43,7 @@ public class AnimeController {
         dao.deleteByIndex(id);
     }
 
-    @PutMapping(value ="/anime/")
+    @PutMapping(value ="/anime")
     public void replaceAnime(@RequestBody Anime a){
         dao.updateByIndex(a);
     }
